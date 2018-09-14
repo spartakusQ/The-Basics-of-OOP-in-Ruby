@@ -60,8 +60,8 @@ class Route
 end
 
 class Train
-  attr_accessor :speed, :number, :car_count, :route, :station
-  attr_reader :type
+  attr_accessor :speed, :number, :route, :station
+  attr_reader :type, :car_count
 
   def initialize(number, type, car_count)
     @number = number
