@@ -22,7 +22,7 @@ class TrainStation
   def show_trains(type = nil)
     if type
       puts "Поезда на станции #{station_name} типа #{type}: "
-      trains.each{|train| puts train.number if train.type == type}
+      trains.each { |train| puts train.number if train.type == type }
     else
       puts "Поезда на станции #{station_name}: "
       trains.each{|train| puts train.number}
@@ -32,9 +32,9 @@ end
 
 
 class Route
-  attr_accessor :stations, :from, :to
+  attr_reader :stations, :from, :to
 
-  def initialize (from, to)
+  def initialize(from, to)
     @stations = [from, to]
     puts "Создан маршрут следования #{from.station_name} - #{to.station_name}"
   end
